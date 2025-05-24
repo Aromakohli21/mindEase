@@ -1,0 +1,210 @@
+.therapists-page {
+  padding-top: 80px;
+}
+
+.therapists-hero {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.therapists-hero h1 {
+  font-size: 3rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.therapists-hero p {
+  font-size: 1.25rem;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.therapists-filter {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.therapists-filter h2 {
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.specialty-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.specialty-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #4299e1;
+  border-radius: 25px;
+  background: transparent;
+  color: #4299e1;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.specialty-btn.active {
+  background-color: #4299e1;
+  color: white;
+}
+
+.specialty-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.therapists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.therapist-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.therapist-card:hover {
+  transform: translateY(-5px);
+}
+
+.therapist-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.therapist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.therapist-info {
+  padding: 1.5rem;
+}
+
+.therapist-info h3 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.therapist-specialty,
+.therapist-rating,
+.therapist-experience,
+.therapist-availability {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.therapist-info p {
+  color: #4a5568;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.therapist-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 1rem 0;
+}
+
+.book-session-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-session-btn:hover {
+  background-color: #3182ce;
+  transform: translateY(-2px);
+}
+
+.therapists-cta {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.therapists-cta h2 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.therapists-cta p {
+  font-size: 1.25rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-btn {
+  padding: 1rem 2rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #3182ce;
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+  .therapists-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .specialty-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .specialty-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .therapists-grid {
+    padding: 2rem 1rem;
+  }
+
+  .therapists-cta h2 {
+    font-size: 2rem;
+  }
+} 
