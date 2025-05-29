@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
@@ -6,78 +6,59 @@ import "./Navbar.css";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="navbar">
-      <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          MindEase
+      <div className="nav-brand">
+        <Link to="/">Mental Health Platform</Link>
+      </div>
+
+      <button className="mobile-menu-btn" onClick={toggleMenu}>
+        {isOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      <div className={`nav-links ${isOpen ? "active" : ""}`}>
+        <Link to="/" onClick={() => setIsOpen(false)}>
+          Home
+        </Link>
+        <Link to="/services" onClick={() => setIsOpen(false)}>
+          Services
+        </Link>
+        <Link to="/therapists" onClick={() => setIsOpen(false)}>
+          Therapists
+        </Link>
+        <Link to="/assessment" onClick={() => setIsOpen(false)}>
+          Assessment
+        </Link>
+        <Link to="/workshops" onClick={() => setIsOpen(false)}>
+          Workshops
+        </Link>
+        <Link to="/community" onClick={() => setIsOpen(false)}>
+          Community
+        </Link>
+        <Link to="/contact" onClick={() => setIsOpen(false)}>
+          Contact
         </Link>
 
-        <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <FaTimes /> : <FaBars />}
+        <div className="auth-buttons">
+          <Link
+            to="/login"
+            className="login-btn"
+            onClick={() => setIsOpen(false)}
+          >
+            Login
+          </Link>
+          <Link
+            to="/signup"
+            className="signup-btn"
+            onClick={() => setIsOpen(false)}
+          >
+            Sign Up
+          </Link>
         </div>
-
-        <ul className={isOpen ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
-            <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/services"
-              className="nav-link"
-              onClick={() => setIsOpen(false)}
-            >
-              Services
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/therapists"
-              className="nav-link"
-              onClick={() => setIsOpen(false)}
-            >
-              Therapists
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/assessment"
-              className="nav-link"
-              onClick={() => setIsOpen(false)}
-            >
-              Assessment
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/workshops"
-              className="nav-link"
-              onClick={() => setIsOpen(false)}
-            >
-              Workshops
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/community"
-              className="nav-link"
-              onClick={() => setIsOpen(false)}
-            >
-              Community
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/contact"
-              className="nav-link"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
       </div>
     </nav>
   );

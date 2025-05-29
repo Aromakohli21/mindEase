@@ -8,6 +8,8 @@ import Assessment from "./pages/Assessment";
 import Workshops from "./pages/Workshops";
 import Community from "./pages/Community";
 import Contact from "./pages/Contact";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 import "./App.css";
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
             <Route path="/workshops" element={<Workshops />} />
             <Route path="/community" element={<Community />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
         </main>
         <Footer />
